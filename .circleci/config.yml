@@ -79,12 +79,12 @@ jobs:
       - restore_cache:
           keys: [frontend-build]
       - run:
-          name: Build front-end
+          name: Front-end build
           command: |
             cd frontend
             npm install
             npm run build
-            exit 1
+            
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-build
@@ -102,7 +102,7 @@ jobs:
             cd backend
             npm install
             npm test
-            exit 1
+            
       - save_cache:
           paths: [backend/node_modules]
           key: backend-build
