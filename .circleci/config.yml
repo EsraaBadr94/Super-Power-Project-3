@@ -147,7 +147,7 @@ jobs:
           keys: [scan-frontend]
       - run:
           name: scan-frontend
-            command: |
+          command: |
               cd frontend
               npm install
             # npm audit fix --force --audit-level=critical
